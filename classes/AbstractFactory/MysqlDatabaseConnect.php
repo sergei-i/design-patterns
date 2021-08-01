@@ -1,8 +1,8 @@
 <?php
 
-namespace FactoryMethod;
+namespace AbstractFactory;
 
-class MysqlSave implements ISave
+class MysqlDatabaseConnect implements DatabaseConnect
 {
     private \mysqli $mysqli;
 
@@ -14,8 +14,8 @@ class MysqlSave implements ISave
         }
     }
 
-    public function save(string $message): void
+    public function connection(): \mysqli
     {
-        $this->mysqli->query("INSERT INTO `messages`(`text`) VALUES ('" . $message . "')");
+        return $this->mysqli;
     }
 }

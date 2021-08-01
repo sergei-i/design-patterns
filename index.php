@@ -30,5 +30,13 @@ spl_autoload_register('projectAutoload');
 //$file->createSaver()->save('Testing FactoryMethod...');
 //
 //$file = new \FactoryMethod\MysqlSaveFactory('127.0.0.1', 'root', '', 'patterns');
-//$file->createSaver()->save("INSERT INTO `text`(`text`) VALUES ('Test patterns...')");
+//$file->createSaver()->save('Test patterns...');
 
+////AbstractFactory
+//function queryExecute(\AbstractFactory\DatabaseFactory $factory) {
+//    $query = $factory->query();
+//    $query->execute("INSERT INTO `messages` (`text`) VALUES ('Testing AbstractFactory...')");
+//}
+//
+//queryExecute(new \AbstractFactory\MysqlDatabaseFactory('127.0.0.1', 'root', '', 'patterns'));
+//queryExecute(new \AbstractFactory\SqliteDatabaseFactory('sqlite.db'));
